@@ -9,7 +9,7 @@ pipeline {
         stage('Build docker image'){
             //this also builds Java project using maven (linux)
             steps{
-                sh "docker build -t ${dockerImageTag}"
+                sh "docker build -t ${dockerImageTag} ."
             }
         }
 
